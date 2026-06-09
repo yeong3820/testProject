@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테스트 페이지</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f2f5;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      text-align: center;
+      max-width: 400px;
+    }
+    h1 { font-size: 24px; margin-bottom: 8px; }
+    p { color: #666; margin-bottom: 20px; }
+    button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button:hover { background: #4338ca; }
+    button:active { transform: scale(.98); }
+    .counter { font-size: 32px; font-weight: 700; margin: 16px 0; color: #4f46e5; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>테스트 페이지</h1>
+    <p>간단한 카운터 예제입니다.</p>
+    <div class="counter" id="counter">0</div>
+    <button id="btn">클릭하세요</button>
+  </div>
+  <script>
+    let count = 0;
+    const counter = document.getElementById('counter');
+    document.getElementById('btn').addEventListener('click', () => {
+      counter.textContent = ++count;
+    });
+  </script>
+</body>
+</html>
